@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayCourses(courses) {    
     courseDropdownElement.innerHTML = '';
 
+    // const defaultOption = document.createElement('option');
+    // defaultOption.value = '';
+    // defaultOption.textContent = 'Choose the course';
+    // defaultOption.selected = true;
+    // courseDropdownElement.appendChild(defaultOption);
+
+    // Adds courses to the dropdown
     courses.forEach(course => {
       const optionElement = document.createElement('option');
       optionElement.value = course.slug;
@@ -38,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
       courseDropdownElement.appendChild(optionElement);
     })
 
-    // Add event listener to the dropdown
+    // Adds event listener to the dropdown
     courseDropdownElement.addEventListener('change', () => {
       const selectedCourseSlug = courseDropdownElement.value;
 
-      // Fetch course details based on the selected course slug
+      // Fetches course details based on the selected course slug
       fetch(`${coursesApiUrl}/${selectedCourseSlug}`)
         .then(response => {
           if (!response.ok) {
@@ -63,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayCourseDetails(courseDetails) {   
     courseInfoElement.innerHTML = `<p>${courseDetails.description}</p>`;
 
-    // Additional dateils here
+    // Additional details here
     totalPriceElement.textContent = `${courseDetails.prices[0].currency} ${courseDetails.prices[0].amount} / ${courseDetails.prices[1].currency} ${courseDetails.prices[1].amount}`;
     nextStartDateElement.textContent = `${courseDetails.start_dates[0]}`;
     followingStartDatesElement.textContent = `${courseDetails.start_dates[1]}, ${courseDetails.start_dates[2]}`;

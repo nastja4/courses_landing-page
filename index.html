@@ -5,36 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>careerFoundry Courses Landing Page</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Adds a link to an icon library (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
 </head>
 <body>
 
   <header>
-    <h1>CareerFoundry Courses</h1>
+    <span class="styleLetterC">C</span><span class="styleLetterF">F</span><h1>Courses</h1>
   </header>
-
+  
   <main>
     <section id="courseSelection">
-      <h2>Select a Courses</h2>
+      <button id="toggleDropdownBtn">
+        <span class="textCourseBtn">Select a Course</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>  
       <!-- <select> element used to create a dropdown list -->
       <select id="courseDropdown">  
         <!-- here Course options using JavaScript -->
       </select>
     </section>
-
-    <section id="courseDetails">
-      <h2>Course Details</h2>
+    
+    <section id="courseDetails">          
+      <h2 class="withVertElem">Course Details</h2>        
       <div id="courseInfo">
         <!-- here Course Details using JavaScript -->
       </div>
     </section>
 
     <section id="pricing">
-      <h2>Pricing</h2>      
+      <h2 class="withVertElem">Pricing</h2>      
       <p>Total Price: <span id="totalPrice"></span></p>
     </section>
 
     <section id="startDates">
-      <h2>Course Start Dates</h2>
+      <h2 class="withVertElem">Course Start Dates</h2>
       <p>Next Course Start Date: <span id="nextStartDate"></span></p>
       <p>Following Start Dates: <span id="followingStartDates"></span></p>
     </section>

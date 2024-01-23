@@ -1,0 +1,85 @@
+html, body {
+  height: 100%;
+  background-color: #112c50;
+  /* 0c2a50 */
+  /* 13B3AC */
+   /* d3eed3 */
+  /* color: #2c2c2c;  */
+  /* 404040 */
+  /* font-family: 'Segoe UI', sans-serif; */
+  font-family:'Nunito', sans-serif;
+  /* a82897 A12691 purple */
+  /* margin: 20px; */
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.styleLetterC {
+  font-size: 28px; 
+  font-style: italic;
+  
+}
+
+.styleLetterF {
+  font-size: 28px; 
+  font-weight: bold; 
+  font-style: italic;
+  margin-right: 30px;
+}
+
+main {
+  flex: 1;
+  margin: 0 20px;
+  
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.textCourseBtn {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  
+}
+
+i {
+  color: white;
+}
+
+#toggleDropdownBtn {
+  background-color: #112c50;
+  border: none;
+  padding: 7px;
+}
+
+#toggleDropdownBtn:hover {
+  background-color: #1d3b63;
+  border: none;
+  padding: 7px;
+}
+
+.withVertElem::before {
+  content: '';
+  display: inline-block;
+  background: #13B3AC;
+  width: 3px;
+  height: 17px;
+  margin-right: 4px;  
+  padding: auto 0;
+}
